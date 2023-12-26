@@ -1,0 +1,29 @@
+{
+  "name": "users_create_table",
+  "operations": [
+    {
+      "create_table": {
+        "name": "users",
+        "columns": [
+          {
+            "name": "id",
+            "type": "serial",
+            "pk": true
+          },
+          {
+            "name": "first_name",
+            "type": "varchar(255)"
+          },
+          {
+            "name": "last_name",
+            "type": "varchar(255)"
+          },
+          {
+            "name": "date_of_birth",
+            "type": "date"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -27,13 +27,14 @@ services:
       DB_NAME: "sample"
       DB_MAX_CONN: "10"
       DB_SEARCH_PATH: "public_users_create_table,public"
+#      DB_SEARCH_PATH: "public_users_add_email,public"
     depends_on:
       - postgres
     networks:
       - net
   app2:
     container_name: app2
-    image: docker.io/nnaka2992/pgroll-sample-app:v2
+    image: docker.io/nnaka2992/pgroll-sample-app:v1
     restart: always
     ports:
       - "8082:8080"
@@ -44,7 +45,8 @@ services:
       DB_PORT: "5432"
       DB_NAME: "sample"
       DB_MAX_CONN: "10"
-      DB_SEARCH_PATH: "public_users_add_email,public"
+      DB_SEARCH_PATH: "public_users_create_table,public"
+#      DB_SEARCH_PATH: "public_users_add_email,public"
     depends_on:
       - postgres
     networks:
